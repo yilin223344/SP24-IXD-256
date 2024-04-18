@@ -18,31 +18,31 @@ Therefore, through the pressure sensor, raindrops and natural sounds on the disp
 
 ## Firmware
 After getting the mechanical components ready, I started writing firmware and the screen rain dynamic interaction.
-Pressure sensor setup:
 
-### Pressure sensor setup
+Pressure sensor setup
 ``` Python
 adc = ADC(Pin(PRESSURE_SENSOR_PIN))
 adc.atten(ADC.ATTN_11DB)
 ```
-### Define the range of values received by the sensor
+Define the range of values received by the sensor
 ``` Python
 
 ```
-### LED string control brightness according to pressure
+LED string control brightness according to pressure
 ``` Python
 
 ```
-### Screen displays raindrops and falls controlled by a pressure sensor
+The screen displays raindrops and falls controlled by a pressure sensor
 ``` Python
 
 ```
-### The sound changes according to the sensor, and another bird sound is added after 5 seconds of pressing.
+The sound changes according to the sensor and another bird sound is added after 5 seconds of pressing.
 ``` Python
 
 ```
 ## Introduction
-### I used p5.js code to control the raindrop and status on the screen. So it allows direct feedback from the sensor and gets dynamic feedback to control the rain.
+I used p5.js code to control the raindrop and status on the screen. So it allows direct feedback from the sensor and gets dynamic feedback to control the rain.
+
 <img width="257" alt="Screenshot 2024-04-18 at 1 25 21 PM" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/92298213-a50d-4893-8137-67979deef16c">
 
 
