@@ -45,8 +45,39 @@ brightness = 255 - adc1_val_8bit
 
 The screen displays raindrops and falls controlled by a pressure sensor
 ``` Python
+from pyodide.ffi import create_proxy
+      from main import *
 
+      p5.setup = create_proxy(setup)
+      p5.draw = create_proxy(draw)
+      setup()
+      p5.mousePressed = create_proxy(mousePressed)
 ```
+``` Python
+async function getReader() {
+              port = await navigator.serial.requestPort({});
+              await port.open({ baudRate: 115200 });
+              console.log(port);
+              console.log(port.getInfo());
+              connectButton.innerText = '🔌 Disconnect';
+              const textDecoder = new TextDecoderStream();
+              readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+              reader = textDecoder.readable
+                  .pipeThrough(new TransformStream(new LineBreakTransformer()))
+                  .getReader();
+
+              while (true) {
+                  const { value, done } = await reader.read();
+                  if (done) {
+                      reader.releaseLock();
+                      break;
+                  }
+                  if (value) {
+                      console.log('received.. ' + value);
+                      const textElement = document.getElementById("data");
+                      textElement.textContent = value;
+```
+
 The sound changes according to the sensor and another bird sound is added after 5 seconds of pressing.
 ``` Python
 
