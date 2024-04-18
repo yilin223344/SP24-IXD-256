@@ -1,11 +1,7 @@
-# Final Project: Pure Sphere
+# Assignment 1：Key holder
 
 ## Introduction
-There is very little time to contact nature nowadays. Hugs and Natural remedies such as consuming chamomile, lavender, and omega-3, these help relieve anxiety symptoms.
-
-My idea was to create an installation that could help people in their busy lives be at home by embracing this transparent ball. Give feedback to the experiencer and reduce their stress by simulating the natural environment and the feeling of hugging.
-
-Therefore, through the pressure sensor, raindrops and natural sounds on the display can be controlled. The LEG light on the ball device will also change.
+I often forget where I put my keys, this Key holder is designed to prevent keys from getting lost. When the key is placed in the holder, the metal of the key conducts electricity. LED string in the holder will change color, and interesting text on the board reminds people to put in the key.
 
 ## Design Sketches
 ![Stress relief](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/a72dea09-deae-4f59-90c1-2ff28b653c55)
