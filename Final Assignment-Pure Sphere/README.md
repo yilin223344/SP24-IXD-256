@@ -1,7 +1,7 @@
 # Final Project: Pure Sphere
 
 ## Introduction
-In life, there is very little time to contact nature nowadays. Hugs and Natural remedies such as consuming chamomile, lavender, and omega-3, these help relieve anxiety symptoms.
+There is very little time to contact nature nowadays. Hugs and Natural remedies such as consuming chamomile, lavender, and omega-3, these help relieve anxiety symptoms.
 
 My idea was to create an installation that could help people in their busy lives be at home by embracing this transparent ball. Give feedback to the experiencer and reduce their stress by simulating the natural environment and the feeling of hugging.
 
