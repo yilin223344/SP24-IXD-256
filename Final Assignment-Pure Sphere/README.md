@@ -26,7 +26,8 @@ adc.atten(ADC.ATTN_11DB)
 ```
 Define the range of values received by the sensor
 ``` Python
-
+  # map the ADC value from 0-4095 to 0-255 range:
+  adc1_val_8bit = map_value(adc1_val, 0, 4095, 0, 255)
 ```
 LED string control brightness according to pressure
 ``` Python
@@ -54,6 +55,25 @@ from pyodide.ffi import create_proxy
       p5.mousePressed = create_proxy(mousePressed)
 ```
 ``` Python
+<div class="contain">
+        <div id="data" style="position: absolute; left: 10px; top: 40px;">
+            100</div>
+
+
+        <div style="position: absolute; z-index: 1; left: 10px; top: 10px;">
+          <button id="connect-button" type="button">🔌 Connect</button>
+          <!--<input type="range" min="0" max="1024" value="100" id="slider">-->
+        </div>
+
+        <script>
+          const connectButton = document.getElementById ('connect-button');
+
+          let reader;
+          let readableStreamClosed;
+          let writer;
+          let writableStreamClosed;
+```
+``` Python
 async function getReader() {
               port = await navigator.serial.requestPort({});
               await port.open({ baudRate: 115200 });
@@ -76,6 +96,27 @@ async function getReader() {
                       console.log('received.. ' + value);
                       const textElement = document.getElementById("data");
                       textElement.textContent = value;
+```
+``` Python
+let port;
+          if ('serial' in navigator) {
+              connectButton.addEventListener('click', async function () {
+                  if (port) {
+
+                      try {
+                          reader.cancel().catch(error => console.log(error));
+                          await readableStreamClosed.catch(() => {});
+                      } catch (error) {
+                          console.log(error);
+                      } finally {
+                          await port.close();
+                          console.log('close port..');
+                          port = undefined;
+                          connectButton.innerText = '🔌 Connect';
+                      }
+                  }
+                  else {
+                      getReader();
 ```
 
 The sound changes according to the sensor and another bird sound is added after 5 seconds of pressing.
