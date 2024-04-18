@@ -8,6 +8,7 @@
 
 ## States
 ### State 1
-![state1](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/996963f3-c38f-4dda-85d4-9480bec0248c)
+![final photo](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/5dd6608f-36e0-46d7-821d-d4a08f076508)
+
 ### State 2
-![state2](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/b5f5b20b-0406-4e70-95b5-39cef45f1d7e)
+<img width="858" alt="final photo 2" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/a8aea2c1-47df-4ae2-8028-6ab422548920">
