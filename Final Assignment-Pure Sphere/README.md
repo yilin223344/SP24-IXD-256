@@ -30,8 +30,19 @@ Define the range of values received by the sensor
 ```
 LED string control brightness according to pressure
 ``` Python
-
+def get_color(r, g, b):
+  rgb_color = (r << 16) | (g << 8) | b
+  return rgb_color
 ```
+``` Python
+brightness = 255 - adc1_val_8bit
+  r = int(brightness * 235/255)  
+  g = int(brightness * 225/255)  
+  b = int(brightness * 52/255)  
+  rgb_color = get_color(r, g, b)
+  rgb.fill_color(rgb_color)
+```
+
 The screen displays raindrops and falls controlled by a pressure sensor
 ``` Python
 
