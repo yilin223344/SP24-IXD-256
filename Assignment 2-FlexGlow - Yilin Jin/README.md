@@ -3,11 +3,8 @@
 ## Introduction
 ![project description](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/b5a88b6f-df59-43ed-926c-293c3926193c)
 
-## Design Sketches
-![idea 2](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/d18aff4c-0bec-464a-83c7-cb089e2580ca)
-
-## Flowchart
-![+ Flowchart](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/042d2dfb-5071-46a8-898a-a1b5b51dae69)
+## State diagram
+<img width="1067" alt="state diagram" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/3c2b7eb5-4966-4b84-846c-2eea0aa16f44">
 
 ## States
 ### State 1
