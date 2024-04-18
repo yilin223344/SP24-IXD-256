@@ -40,9 +40,19 @@ The sound changes according to the sensor and another bird sound is added after 
 ``` Python
 
 ```
-## Introduction
+## Integrations
 I used p5.js code to control the raindrop and status on the screen. So it allows direct feedback from the sensor and gets dynamic feedback to control the rain.
 
 <img width="257" alt="Screenshot 2024-04-18 at 1 25 21 PM" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/92298213-a50d-4893-8137-67979deef16c">
+
+## Enclosure Design
+
+
+
+## Project outcome
+
+## Conclusion
+
+
 
 
