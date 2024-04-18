@@ -1,8 +1,11 @@
 # Assignment 1：Key holder
 
 ## Introduction
-I often forget where I put my keys, this Key holder is designed to prevent keys from getting lost. When the key is placed in the holder, the metal of the key conducts electricity. LED string in the holder will change color, and interesting text on the board reminds people to put in the key.
+My first project is a “key holder” with four different states in it. The inspiration for this project was that I often lose my keys because I don't have a special place to keep them. This project can remind me that when I get home, the first thing is to put the key in the holder, the led light and display are obvious, and will not be easy to forget.
 
+When the key is not in the box, the screen will display "I'm hungry :o" on a white background, the RGB light’s color is white. This means to remind the user to put the key in.
+
+When the key is placed in the box, the metal on the key will touch the copper tape on the box. At this time, the screen will change to a purple background showing “Thank you :)", and the RGB light’s color will change from white to purple. This means the key is in the holder.
 ## Design Sketches
 ![Stress relief](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/a72dea09-deae-4f59-90c1-2ff28b653c55)
 
