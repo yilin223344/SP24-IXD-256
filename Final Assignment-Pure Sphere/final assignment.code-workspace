@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "webserial_pyscript_p5",
+			"path": "../Downloads/class/webserial_pyscript_p5"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502
+	}
+}
