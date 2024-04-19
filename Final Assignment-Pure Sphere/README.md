@@ -12,9 +12,9 @@ Therefore, through the pressure sensor, raindrops and natural sounds on the disp
 
 ## Implementation
 ### Hardware
-· 1 Atom s3 board
-· 1 pressure sensor
-· 1 LED string
+- 1 Atom s3 board
+- 1 pressure sensor
+- 1 LED string
 
 ### State diagram
 <img width="1189" alt="state diagram" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/d1a48a46-eeb2-4223-991c-934bc7601c3c">
