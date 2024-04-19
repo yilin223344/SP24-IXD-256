@@ -52,76 +52,84 @@ from pyodide.ffi import create_proxy
       p5.setup = create_proxy(setup)
       p5.draw = create_proxy(draw)
       setup()
-      p5.mousePressed = create_proxy(mousePressed)
+```
+Control location and how many raindrops fall
+``` Python
+if(sensor_val < 50):
+    if p5.random(1) < p5.map(sensor_val, 0, 255, 0.05, 0.2): 
+      createDrop(p5.random(1512), 0) 
+
+  
+  if len(drops) != 0:
+    for drop in drops:
+      fall(drop)  
+      display(drop)  
+      updateTrail(drop)  
 ```
 ``` Python
-<div class="contain">
-        <div id="data" style="position: absolute; left: 10px; top: 40px;">
-            100</div>
+def createDrop(x, y):
+    drop = {'x': x, 'y': y, 'speed': p5.random(1, 5), 'trail': [], 'trailLength': 20}
+    drops.append(drop)
 
+def fall(drop):
+    drop['y'] += drop['speed']  
+    if drop['y'] > 982:  
+        index = drops.index(drop)  
+        if index != -1:
+            drops.pop(index)  
 
-        <div style="position: absolute; z-index: 1; left: 10px; top: 10px;">
-          <button id="connect-button" type="button">🔌 Connect</button>
-          <!--<input type="range" min="0" max="1024" value="100" id="slider">-->
-        </div>
-
-        <script>
-          const connectButton = document.getElementById ('connect-button');
-
-          let reader;
-          let readableStreamClosed;
-          let writer;
-          let writableStreamClosed;
+def display(drop):
+    if drop:
+        p5.push()
+        p5.noStroke()  
+        p5.fill(1, 57, 71)  
+        p5.ellipse(drop['x'], drop['y'], 10, 10)  
+        p5.pop()
 ```
 ``` Python
-async function getReader() {
-              port = await navigator.serial.requestPort({});
-              await port.open({ baudRate: 115200 });
-              console.log(port);
-              console.log(port.getInfo());
-              connectButton.innerText = '🔌 Disconnect';
-              const textDecoder = new TextDecoderStream();
-              readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
-              reader = textDecoder.readable
-                  .pipeThrough(new TransformStream(new LineBreakTransformer()))
-                  .getReader();
+def updateTrail(drop):
+    if drop:
+        drop['trail'].append(p5.createVector(drop['x'], drop['y']))
 
-              while (true) {
-                  const { value, done } = await reader.read();
-                  if (done) {
-                      reader.releaseLock();
-                      break;
-                  }
-                  if (value) {
-                      console.log('received.. ' + value);
-                      const textElement = document.getElementById("data");
-                      textElement.textContent = value;
-```
-``` Python
-let port;
-          if ('serial' in navigator) {
-              connectButton.addEventListener('click', async function () {
-                  if (port) {
+        if len(drop['trail']) > drop['trailLength']:
+            drop['trail'].pop(0)
 
-                      try {
-                          reader.cancel().catch(error => console.log(error));
-                          await readableStreamClosed.catch(() => {});
-                      } catch (error) {
-                          console.log(error);
-                      } finally {
-                          await port.close();
-                          console.log('close port..');
-                          port = undefined;
-                          connectButton.innerText = '🔌 Connect';
-                      }
-                  }
-                  else {
-                      getReader();
+        
+        for i in range(len(drop['trail'])):
+            transparency = p5.map(i, 0, len(drop['trail']), 0, 255)
+            p5.push()
+            p5.fill(1, 57, 71, transparency)  
+            p5.noStroke()
+            p5.ellipse(drop['trail'][i].x, drop['trail'][i].y, 10, 10)
+            p5.pop()
 ```
 
 The sound changes according to the sensor and another bird sound is added after 5 seconds of pressing.
 ``` Python
+sound1 = p5.loadSound('soft_rain.mp3') 
+sound2 = p5.loadSound('birds.mp3')
+sound_timer = 0
+```
+``` Python
+if(sound_state == 'NO SOUND'):
+    if(sensor_val < 100):
+      #print('play sound 1')
+      sound1.play()
+      sound_state = 'SOUND 1'
+      # update sound timer:
+      sound_timer = p5.millis()  
+  elif(sound_state == 'SOUND 1'):
+    if(p5.millis() > sound_timer + 5000):
+      #print('5 seconds passed..')
+      sound2.play()
+      sound_state = 'SOUND 2'
 
+  if(sound_state == 'SOUND 1') or (sound_state == 'SOUND 2'):
+    if(sensor_val > 100):
+      #print('stop sounds')
+      sound1.stop()
+      sound2.stop()
+      sound_state = 'NO SOUND'
 ```
 ## Integrations
 I used p5.js code to control the raindrop and status on the screen. So it allows direct feedback from the sensor and gets dynamic feedback to control the rain.
@@ -140,9 +148,9 @@ I used p5.js code to control the raindrop and status on the screen. So it allows
 
 
 ## Conclusion
-Concluding this project and this term, I learned a lot about coding through MicroPython. How to use the code on the device, how to build the enclosure, how to debug the details of the code, etc. These are the challenges encountered in the production process.
+Concluding this project and this term, I learned a lot about coding through MicroPython. How to use the code on the device, how to build the enclosure, how to debug the details of the code, etc. These are the challenges encountered and what I learned in the production process.
 
-I tried the code and screen interaction of p5.js in this final assignment. The emphasis was placed on interaction with people and how to reduce stress by simulating the natural environment through the device. Transparent spheres minimize interaction barriers. Each interaction has its meaning, and the interaction of hugs and brightness is also a relaxing experience. The switching of sound and the feedback of screen interaction provide an immersive experience environment. Providing an environment where you can relax at any time is the goal of this project.
+I tried the code and screen interaction of p5.js for the first time in this final assignment. The emphasis was placed on interaction with people and how to reduce stress by simulating the natural environment through the device. Transparent spheres minimize interaction barriers. Each interaction has its meaning, and the interaction of hugs and brightness is also a relaxing experience. The switching of sound and the feedback of screen interaction provide an immersive experience environment. Providing an environment where you can relax at any time is the goal of this project.
 
 Overall, this course allowed me to achieve the installation I wanted to do. I enjoyed the process from the sketch to the final outcome. In the future, I will continue to use the knowledge learned to design more interactive installation art.
 
