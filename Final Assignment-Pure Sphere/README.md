@@ -133,6 +133,7 @@ I used p5.js code to control the raindrop and status on the screen. So it allows
 
 
 ## Project outcome
+[Prototype link](https://youtu.be/TjiBvIwxByI)
 
 ## Conclusion
 Concluding this project and this term, I learned a lot about coding through MicroPython. How to use the code on the device, how to build the enclosure, how to debug the details of the code, etc. These are the challenges encountered in the production process.
