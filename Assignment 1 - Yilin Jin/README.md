@@ -13,6 +13,41 @@ When the key is placed in the box, the metal on the key will touch the copper ta
 ## State diagram
 ![+ Flowchart](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/042d2dfb-5071-46a8-898a-a1b5b51dae69)
 
+## Firmware
+
+Input LED lights color and the patterns for the screen
+``` Python
+  if time.ticks_ms() > input_timer + 500:
+    input_timer = time.ticks_ms()
+    input_value = input_pin.value()
+    if input_value == 0:
+      Widgets.fillScreen(0xd052ed)
+      label1 = Widgets.Label("Thank you :)", 7, 54, 1.0, 0xffffff, 0xd052ed, Widgets.FONTS.DejaVu18)
+      rgb2 = RGB(io=2, n=10, type="SK6812")
+      rgb2.fill_color(0xcc33cc)
+    else:
+      Widgets.fillScreen(0xffffff)
+      label1 = Widgets.Label("I'm hungry:o", 7, 54, 1.0, 0x000000, 0xffffff, Widgets.FONTS.DejaVu18)
+      rgb2 = RGB(io=2, n=10, type="SK6812")
+      rgb2.fill_color(0xffffff)
+  if program_state == 'START':
+    if input_value == 0:
+      program_state = 'RUN'
+```
+``` Python
+if __name__ == '__main__':
+  try:
+    setup()
+    while True:
+      loop()
+  except (Exception, KeyboardInterrupt) as e:
+    try:
+      from utility import print_error_msg
+      print_error_msg(e)
+    except ImportError:
+      print("please update to latest firmware")
+```
+
 ## States
 ### State 1
 ![state1](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/996963f3-c38f-4dda-85d4-9480bec0248c)
