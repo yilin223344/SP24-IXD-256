@@ -135,6 +135,11 @@ I used p5.js code to control the raindrop and status on the screen. So it allows
 ## Project outcome
 
 ## Conclusion
+Concluding this project and this term, I learned a lot about coding through MicroPython. How to use the code on the device, how to build the enclosure, how to debug the details of the code, etc. These are the challenges encountered in the production process.
+
+I tried the code and screen interaction of p5.js in this final assignment. The emphasis was placed on interaction with people and how to reduce stress by simulating the natural environment through the device. Transparent spheres minimize interaction barriers. Each interaction has its meaning, and the interaction of hugs and brightness is also a relaxing experience. The switching of sound and the feedback of screen interaction provide an immersive experience environment. Providing an environment where you can relax at any time is the goal of this project.
+
+Overall, this course allowed me to achieve the installation I wanted to do. I enjoyed the process from the sketch to the final outcome. In the future, I will continue to use the knowledge learned to design more interactive installation art.
 
 
 
