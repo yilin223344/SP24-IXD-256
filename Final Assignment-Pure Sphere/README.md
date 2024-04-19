@@ -139,6 +139,8 @@ I used p5.js code to control the raindrop and status on the screen. So it allows
 
 <img width="257" alt="Screenshot 2024-04-18 at 1 25 21 PM" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/92298213-a50d-4893-8137-67979deef16c">
 
+<img width="1486" alt="Screenshot 2024-04-19 at 8 58 49 AM" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/e6754ef2-2e61-4936-aaac-6b9f1005bbfa">
+
 ![WechatIMG479](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/3e8ee211-ae0a-4e48-b58d-60a258c908ee)
 
 
