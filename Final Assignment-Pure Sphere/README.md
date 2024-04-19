@@ -135,6 +135,10 @@ I used p5.js code to control the raindrop and status on the screen. So it allows
 ## Project outcome
 [Prototype link](https://youtu.be/TjiBvIwxByI)
 
+![IMG_8937](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/9cf18c84-97f3-4ab8-83f6-522d406c794d)
+![IMG_8938](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/c9fbedfd-1388-4ecd-9d72-24fe07cd637d)
+
+
 ## Conclusion
 Concluding this project and this term, I learned a lot about coding through MicroPython. How to use the code on the device, how to build the enclosure, how to debug the details of the code, etc. These are the challenges encountered in the production process.
 
