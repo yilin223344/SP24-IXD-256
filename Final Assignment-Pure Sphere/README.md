@@ -16,6 +16,9 @@ Therefore, through the pressure sensor, raindrops and natural sounds on the disp
 · 1 pressure sensor
 · 1 LED string
 
+### State diagram
+<img width="1189" alt="state diagram" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/d1a48a46-eeb2-4223-991c-934bc7601c3c">
+
 ## Firmware
 After getting the mechanical components ready, I started writing firmware and the screen rain dynamic interaction.
 
@@ -136,9 +139,23 @@ I used p5.js code to control the raindrop and status on the screen. So it allows
 
 <img width="257" alt="Screenshot 2024-04-18 at 1 25 21 PM" src="https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/92298213-a50d-4893-8137-67979deef16c">
 
+![WechatIMG479](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/3e8ee211-ae0a-4e48-b58d-60a258c908ee)
+
+
 ## Enclosure Design
+The pressure sensor controls the pressure by conducting different numerical control interactions.
 
+![sensor](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/22d5ba00-8328-4d17-af41-6908d509ce76)
 
+The Atom s3 board detects pressure and transmits the led strip and screen.
+
+![Implementation2](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/4428e13c-647b-405f-a097-3d902071fd9d)
+
+The sphere is made of PVC transparent material, which better blends into the natural background and reduces the interaction barrier. The base is made of wood material and natural jute thread, which is more environmentally friendly and natural.
+
+![Implementation3](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/f751d96b-7fae-47d6-bf17-d5c5995631e3)
+
+![Implementation1](https://github.com/yilin223344/Yilin-SP24-IXD-256/assets/125238982/171208c2-0ae2-47b8-a810-39b8d5cb7789)
 
 ## Project outcome
 [Prototype link](https://youtu.be/TjiBvIwxByI)
